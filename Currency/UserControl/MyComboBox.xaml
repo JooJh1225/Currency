@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="Currency.MyComboBox"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:Currency"
+             mc:Ignorable="d"             
+             d:DesignHeight="30" d:DesignWidth="700">
+
+    <Grid>
+        <ComboBox HorizontalAlignment="Left" FontWeight="Light" MaxDropDownHeight="300" ItemsSource="{Binding ComboBoxModelList ,UpdateSourceTrigger=PropertyChanged}" DisplayMemberPath="Quote"
+                  IsDropDownOpen="{Binding DropDownOpen, UpdateSourceTrigger=PropertyChanged}" SelectedValue="{Binding SelItem}" SelectedValuePath="Num"
+                  Height="30" Width="700" DockPanel.Dock="Top" VerticalAlignment="Top">
+        </ComboBox>
+        <TextBox Width="700" FontWeight="Light" Height="30" Margin="0,0,20,0" Text="{Binding TBoxText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+    </Grid>
+</UserControl>
